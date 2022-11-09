@@ -192,3 +192,20 @@ td {
   max-height: 200px;
   padding: 0 12px;
 }
+
+footer,
+.footer {
+  width: 80%;
+  margin: 40px auto 0;
+}
+
+.contact-form {
+  width: 95%;
+  max-width: 500px;
+}
+.contact-form input {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+}
