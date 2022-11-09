@@ -24,6 +24,7 @@
       </div>
     </div>
     <div class="fix-padding"></div>
+
     <!-- Hero -->
     <div class="slider">
       <ion-icon name="arrow-back" class="slider--btn prev"></ion-icon>
@@ -81,34 +82,36 @@
     <!-- Tables -->
     <!-- METHOD 2 - ARIA aria-describedby="table-desc" -->
     <!-- <p id="table-desc">This describes the summary. Connected with ARIA</p> -->
-    <table>
-      <h2>This is a caption</h2>
-      <p>This is a summary</p>
+    <div class="table-section">
+      <table>
+        <h2>This is a caption</h2>
+        <p>This is a summary</p>
 
-      <!-- 
-        METHOD 1 - Semantic HTML
-        <caption
-        >This is the caption
-        <span>This is the summary</span>
-      </caption> -->
+        <!-- 
+          METHOD 1 - Semantic HTML
+          <caption
+          >This is the caption
+          <span>This is the summary</span>
+        </caption> -->
 
-      <tr>
-        <!-- Change these to <th> -->
-        <td>Heading One</td>
-        <td>Heading Two</td>
-        <td>Heading Three</td>
-        <td>Heading Four</td>
-      </tr>
-      <tr>
-        <td>One</td>
-        <td>Two</td>
-        <td>Three</td>
-        <td>Four</td>
-      </tr>
-    </table>
+        <tr>
+          <!-- Change these to <th> -->
+          <td>Heading One</td>
+          <td>Heading Two</td>
+          <td>Heading Three</td>
+          <td>Heading Four</td>
+        </tr>
+        <tr>
+          <td>One</td>
+          <td>Two</td>
+          <td>Three</td>
+          <td>Four</td>
+        </tr>
+      </table>
+    </div>
 
     <!-- Accordion -->
-    <div class="accordion-container">
+    <div class="accordion-section">
       <h1>Accordion</h1>
       <!-- <div
         class="accordion"
@@ -121,19 +124,25 @@
         >
       </div> -->
       <div class="accordion">
-        <h3>Click me</h3>
+        <h3 class="accrodion-drop-btn"
+          >Click me <ion-icon name="arrow-dropdown"></ion-icon
+        ></h3>
         <p
           >Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, et.</p
         >
       </div>
       <div class="accordion">
-        <h3>Click me</h3>
+        <h3 class="accrodion-drop-btn"
+          >Click me <ion-icon name="arrow-dropdown"></ion-icon
+        ></h3>
         <p
           >Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, et.</p
         >
       </div>
       <div class="accordion">
-        <h3>Click me</h3>
+        <h3 class="accrodion-drop-btn"
+          >Click me <ion-icon name="arrow-dropdown"></ion-icon
+        ></h3>
         <p
           >Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, et.</p
         >
