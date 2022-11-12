@@ -230,16 +230,19 @@ header,
     height: auto;
     padding: 24px 24px 0;
   }
+  .slide--heading {
+    font-size: 2rem;
+  }
   .slider--btn {
     top: 35%;
-    padding: 5px;
-    font-size: 16px;
+    padding: 10px;
+    font-size: 20px;
   }
   .slider--btn.prev {
-    left: 5px;
+    left: 10px;
   }
   .slider--btn.next {
-    right: 5px;
+    right: 10px;
   }
 
   .slide .buttons {
