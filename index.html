@@ -33,7 +33,7 @@
           <h1>LogoHere</h1>
         </div>
 
-        <!-- Add aria-role and aria-label -->
+        <!-- Change to button element, add aria-controls, aria-expanded, and aria-label -->
         <div class="burger">
           <div class="line-1"></div>
           <div class="line-2"></div>
@@ -42,7 +42,7 @@
       </div>
     </div>
 
-    <!-- Mobile Navbar: add aria-expanded and change to semantic html -->
+    <!-- Mobile Navbar: add aria-label and change to semantic html -->
     <div class="mb-navbar">
       <div class="mb-nav-list">
         <p>Home</p>
@@ -55,11 +55,13 @@
 
     <!-- ADD LANDMARK ELEMENTS TO PAGE: Header, Main, Section -->
 
-    <!-- Hero -->
+    <!-- Hero: add aria-label="carousel" to the parent -->
     <div class="slider">
+      <!-- use native button elements and add aria-label -->
       <ion-icon name="arrow-back" class="slider--btn prev"></ion-icon>
       <ion-icon name="arrow-forward" class="slider--btn next"></ion-icon>
       <div class="slider--inner">
+        <!-- add role="group" and aria-label="slide 1 of 4" -->
         <div class="slide">
           <div class="slide--content">
             <h5 class="slide--heading">
