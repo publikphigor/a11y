@@ -118,3 +118,13 @@ const contactForm = document.querySelector(".contact-form");
 contactForm.addEventListener("submit", function (e) {
   // e.preventDefault();
 });
+
+function checkValidity(id) {
+  alert(1);
+  console.log(1);
+  const el = document.getElementById(id);
+  const value = el.value.trim();
+  if ((value = "")) {
+    el.setAttribute("aria-invalid", "true");
+  }
+}

@@ -8,7 +8,7 @@
     <title>Accessibility Tutorial</title>
   </head>
   <body>
-    <!-- Header -->
+    <!-- Header: change to semantic HTML -->
     <div class="header">
       <div class="header--inner">
         <div class="logo">
@@ -24,12 +24,14 @@
       </div>
     </div>
 
-    <!-- Mobile Header -->
+    <!-- Mobile Header: change to semantic HTML -->
     <div class="mb-header">
       <div class="mb-header--inner">
         <div class="mb-logo">
           <h1>LogoHere</h1>
         </div>
+
+        <!-- Add aria-role and aria-label -->
         <div class="burger">
           <div class="line-1"></div>
           <div class="line-2"></div>
@@ -38,7 +40,7 @@
       </div>
     </div>
 
-    <!-- Mobile Navbar -->
+    <!-- Mobile Navbar: add aria-expanded and change to semantic html -->
     <div class="mb-navbar">
       <div class="mb-nav-list">
         <p>Home</p>
@@ -48,6 +50,8 @@
     </div>
 
     <div class="fix-padding"></div>
+
+    <!-- ADD LANDMARK ELEMENTS TO PAGE: Header, Main, Section -->
 
     <!-- Hero -->
     <div class="slider">
@@ -225,29 +229,21 @@
       <form class="contact-form">
         <h1>Form with validation</h1>
 
-        <!-- wrap each input in a div, add span tags for validity, add aria-invalid, aria-describedBy for password labels and ids -->
+        <!-- wrap each input in a div, add span tags for validity, add aria-invalid, aria-describedBy for password labels and ids, add onblur attribute and pass validity function -->
         <input type="text" placeholder="Enter your name" required="true" />
         <input
           type="email"
           placeholder="Enter your email address"
-          required="true"
+          id="email"
+          onblur="checkValidity('email')"
         />
-        <input
-          type="password"
-          placeholder="Create a password"
-          required="true"
-        />
-        <span
+        <input type="password" placeholder="Create a password" />
+        <!-- <span
           >Password must be 8-15 characters and include letters and
           numbers.</span
-        >
+        > -->
         <input type="date" />
-        <input
-          type="submit"
-          value="Submit"
-          class="btn btn--fill"
-          required="true"
-        />
+        <input type="submit" value="Submit" class="btn btn--fill" />
       </form>
     </div>
 
