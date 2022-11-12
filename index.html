@@ -134,17 +134,23 @@
         </caption> -->
 
         <tr>
-          <!-- Change these to <th> -->
-          <td>Heading One</td>
-          <td>Heading Two</td>
-          <td>Heading Three</td>
-          <td>Heading Four</td>
+          <!-- Change these to <th> and add ids for labels -->
+          <td>Animals</td>
+          <td>Fruits</td>
+          <td>Places</td>
+          <td>Cars</td>
         </tr>
         <tr>
-          <td>One</td>
-          <td>Two</td>
-          <td>Three</td>
-          <td>Four</td>
+          <td>Cat</td>
+          <td>Apple</td>
+          <td>Nigeria</td>
+          <td>Ford Mustang</td>
+        </tr>
+        <tr>
+          <td>Dog</td>
+          <td>Pineapple</td>
+          <td>Egypt</td>
+          <td>Tesla</td>
         </tr>
       </table>
     </div>
@@ -164,7 +170,8 @@
       </div> -->
       <div class="accordion">
         <h3 class="accordion-drop-btn">
-          Click me <ion-icon name="arrow-dropdown"></ion-icon>
+          How many days are in a week?
+          <ion-icon name="arrow-dropdown"></ion-icon>
         </h3>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima
@@ -178,7 +185,7 @@
       </div>
       <div class="accordion">
         <h3 class="accordion-drop-btn">
-          Click me <ion-icon name="arrow-dropdown"></ion-icon>
+          What is accessibility? <ion-icon name="arrow-dropdown"></ion-icon>
         </h3>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima
@@ -192,7 +199,8 @@
       </div>
       <div class="accordion">
         <h3 class="accordion-drop-btn">
-          Click me <ion-icon name="arrow-dropdown"></ion-icon>
+          How to get started with accessibility?
+          <ion-icon name="arrow-dropdown"></ion-icon>
         </h3>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima
@@ -206,15 +214,41 @@
       </div>
     </div>
 
+    <!-- Images section -->
+    <div class="images-section">
+      <h6>Images</h6>
+      <img src="https://source.unsplash.com/P-yzuyWFEIk" alt="" />
+    </div>
+
     <!-- Form with validation -->
     <div class="footer">
-      <div class="contact-form">
+      <form class="contact-form">
         <h1>Form with validation</h1>
-        <input type="text" placeholder="Enter your name" />
-        <input type="email" placeholder="Enter your email address" />
+
+        <!-- wrap each input in a div, add span tags for validity, add aria-invalid, aria-describedBy for password labels and ids -->
+        <input type="text" placeholder="Enter your name" required="true" />
+        <input
+          type="email"
+          placeholder="Enter your email address"
+          required="true"
+        />
+        <input
+          type="password"
+          placeholder="Create a password"
+          required="true"
+        />
+        <span
+          >Password must be 8-15 characters and include letters and
+          numbers.</span
+        >
         <input type="date" />
-        <input type="button" value="Submit" class="btn btn--fill" />
-      </div>
+        <input
+          type="submit"
+          value="Submit"
+          class="btn btn--fill"
+          required="true"
+        />
+      </form>
     </div>
 
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>

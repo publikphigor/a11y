@@ -302,11 +302,24 @@ td {
 .accordion p {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.4s;
+  transition: max-height 0.4s, padding 0.4s;
 }
 
 .accordion p.active {
   max-height: 200px;
+  padding: 12px 0;
+}
+
+.images-section {
+  width: 80%;
+  max-width: 1450px;
+  margin: 40px auto 0;
+}
+.images-section h6 {
+  font-size: 2rem;
+}
+.images-section img {
+  width: 100%;
 }
 
 footer,
@@ -324,4 +337,9 @@ footer,
   width: 100%;
   padding: 12px;
   margin-bottom: 12px;
+}
+.contact-form input[type="submit"]:focus {
+  background-color: #fff;
+  color: #000;
+  font-weight: 700;
 }

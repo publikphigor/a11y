@@ -111,3 +111,10 @@ accordionBtns.forEach((btn) => {
 function showAccordion(accordion) {
   accordion.classList.toggle("active");
 }
+
+// Contact form
+const contactForm = document.querySelector(".contact-form");
+
+contactForm.addEventListener("submit", function (e) {
+  // e.preventDefault();
+});
