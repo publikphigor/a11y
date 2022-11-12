@@ -97,3 +97,17 @@ sliderContainer.addEventListener("transitionend", () => {
     sliderContainer.style.transform = `translateX(-${slideSize * counter}%)`;
   }
 });
+
+// Accordion
+const accordionBtns = document.querySelectorAll(".accordion");
+
+accordionBtns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const accordion = btn.querySelector("p");
+    showAccordion(accordion);
+  });
+});
+
+function showAccordion(accordion) {
+  accordion.classList.toggle("active");
+}
