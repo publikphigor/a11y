@@ -114,9 +114,34 @@ function showAccordion(accordion) {
 
 // Contact form
 const contactForm = document.querySelector(".contact-form");
+const overlay = document.querySelector(".overlay");
+const closeModalBtns = document.querySelectorAll(".close-modal");
+
+function showOverlayModal() {
+  overlay.classList.add("active");
+  window.addEventListener("keydown", escapeKeyCloseModal);
+}
+
+function hideOverlayModal() {
+  overlay.classList.remove("active");
+  window.removeEventListener("keydown", escapeKeyCloseModal);
+}
+
+function escapeKeyCloseModal(event) {
+  if (event.key === "Escape") {
+    hideOverlayModal();
+  }
+}
+
+closeModalBtns.forEach((btn) => {
+  btn.addEventListener("click", hideOverlayModal);
+});
+
+overlay.addEventListener("click", hideOverlayModal);
 
 contactForm.addEventListener("submit", function (e) {
-  // e.preventDefault();
+  e.preventDefault();
+  showOverlayModal();
 });
 
 function checkValidity(id) {

@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="css/index.css" />
     <title>Accessibility Tutorial</title>
   </head>
+
+  <!-- add aria-haspopup="dialog" -->
   <body>
     <!-- Header: change to semantic HTML -->
     <div class="header">
@@ -245,6 +247,21 @@
         <input type="date" />
         <input type="submit" value="Submit" class="btn btn--fill" />
       </form>
+    </div>
+
+    <!-- Modal Window 
+      role="dialog"
+      aria-modal="true"
+      aria-live="assertive"
+      aria-labelledby="modal-title" -->
+    <div class="overlay">
+      <div class="modal">
+        <h1 id="modal-title">Your responses have been submitted.</h1>
+        <p>To close click a button, Escape, or outside this dialog.</p>
+        <!--  aria-label="Close" -->
+        <button class="close-modal">X</button>
+        <button class="close-modal">Close</button>
+      </div>
     </div>
 
     <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
