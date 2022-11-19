@@ -10,8 +10,8 @@
 
   <!-- add aria-haspopup="dialog" -->
   <body>
+    <!-- Header: change to semantic HTML -->
     <main>
-      <!-- Header: change to semantic HTML -->
       <header class="header">
         <div class="header--inner">
           <div class="logo">
@@ -19,42 +19,37 @@
           </div>
           <nav class="navbar">
             <ul class="nav-list">
-              <li><a href="https://google.com">Home</a></li>
-              <li><a href="https://google.com">About</a></li>
-              <li><a href="https://google.com">Contact</a></li>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Contact</a></li>
             </ul>
           </nav>
         </div>
       </header>
 
       <!-- Mobile Header: change to semantic HTML -->
-      <header class="mb-header">
+      <div class="mb-header">
         <div class="mb-header--inner">
           <div class="mb-logo">
             <h1>LogoHere</h1>
           </div>
 
           <!-- Change to button element, add aria-controls, aria-expanded, and aria-label -->
-          <button
-            class="burger"
-            aria-controls="mobile-navbar"
-            aria-expanded="false"
-            aria-label="Mobile menu button"
-          >
+          <div class="burger">
             <div class="line-1"></div>
             <div class="line-2"></div>
             <div class="line-3"></div>
-          </button>
+          </div>
         </div>
-      </header>
+      </div>
 
       <!-- Mobile Navbar: add aria-label and change to semantic html -->
-      <div class="mb-navbar" id="mobile-navbar">
-        <ul class="mb-nav-list">
-          <li><a href="https://google.com">Home</a></li>
-          <li><a href="https://google.com">About</a></li>
-          <li><a href="https://google.com">Contact</a></li>
-        </ul>
+      <div class="mb-navbar">
+        <div class="mb-nav-list">
+          <p>Home</p>
+          <p>About</p>
+          <p>Contact</p>
+        </div>
       </div>
 
       <div class="fix-padding"></div>
@@ -62,98 +57,78 @@
       <!-- ADD LANDMARK ELEMENTS TO PAGE: Header, Main, Section -->
 
       <!-- Hero: add aria-label="carousel" to the parent -->
-      <section class="slider" tabindex="0" aria-label="carousel">
+      <section class="slider" aria-label="Carousel">
         <!-- use native button elements and add aria-label -->
-        <button class="slider--btn prev">
+        <button class="slider--btn prev" aria-label="Slider previous button">
           <ion-icon name="arrow-back"></ion-icon>
         </button>
-
-        <button class="slider--btn next">
+        <button class="slider--btn next" aria-label="Slider next button">
           <ion-icon name="arrow-forward"></ion-icon>
         </button>
-
         <div class="slider--inner">
           <!-- add role="group" and aria-label="slide 1 of 4" -->
           <div class="slide" role="group" aria-label="Slide 1 of 4">
             <div class="slide--content">
-              <h1 class="slide--heading">
+              <h5 class="slide--heading">
                 Learn about Accessibility with publikphigor
-              </h1>
+              </h5>
               <p>
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                 Voluptatibus, in illo. Cumque necessitatibus, eos velit
                 perferendis reprehenderit sunt blanditiis fugit.
               </p>
               <div class="buttons">
-                <a
-                  href="#"
-                  aria-label="Order now button"
-                  class="btn btn--outline"
-                  >Order Now</a
-                >
-                <a
-                  href="#"
-                  aria-label="Order now button"
-                  class="btn btn--outline"
-                  >Read More</a
-                >
+                <button class="btn btn--fill">Button One</button>
+                <button class="btn btn--outline">Button Two</button>
               </div>
             </div>
           </div>
 
-          <div class="slide">
+          <div class="slide" role="group" aria-label="Slide 2 of 4">
             <div class="slide--content">
-              <h1 class="slide--heading">Write Semantic HTor</h1>
+              <h5 class="slide--heading">Write Semantic HTor</h5>
               <p>
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                 Voluptatibus, in illo. Cumque necessitatibus, eos velit
                 perferendis reprehenderit sunt blanditiis fugit.
               </p>
               <div class="buttons">
-                <a
-                  href="#"
-                  aria-label="Order now button"
-                  class="btn btn--outline"
-                  >Order Now</a
-                >
-                <a
-                  href="#"
-                  aria-label="Order now button"
-                  class="btn btn--outline"
-                  >Read More</a
-                >
+                <button class="btn btn--fill">Button One</button>
+                <button class="btn btn--outline">Button Two</button>
               </div>
             </div>
           </div>
 
-          <div class="slide">
+          <div class="slide" role="group" aria-label="Slide 3 of 4">
             <div class="slide--content">
-              <h1 class="slide--heading">
+              <h5 class="slide--heading">
                 Get started with ARIA in 10 minutes
-              </h1>
+              </h5>
               <p>
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                 Voluptatibus, in illo. Cumque necessitatibus, eos velit
                 perferendis reprehenderit sunt blanditiis fugit.
               </p>
               <div class="buttons">
-                <span class="btn btn--fill">Button One</span>
-                <span class="btn btn--outline">Button Two</span>
+                <button class="btn btn--fill">Button One</button>
+                <button class="btn btn--outline">Button Two</button>
               </div>
             </div>
           </div>
 
-          <div class="slide">
+          <div class="slide" role="group" aria-label="Slide 4 of 4">
             <div class="slide--content">
-              <h1 class="slide--heading">Nothing here, just vibes!</h1>
+              <h5 class="slide--heading">Nothing here, just vibes!</h5>
               <p>
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                 Voluptatibus, in illo. Cumque necessitatibus, eos velit
                 perferendis reprehenderit sunt blanditiis fugit.
               </p>
               <div class="buttons">
-                <span class="btn btn--fill">Button One</span>
-                <span class="btn btn--outline">Button Two</span>
+                <button class="btn btn--fill" tabindex="0">Button One</button>
+                <button class="btn btn--outline" tabindex="0">
+                  Button Two
+                </button>
               </div>
             </div>
           </div>
@@ -172,13 +147,13 @@
 
           <tr>
             <!-- Change these to <th> and add ids for labels -->
-            <th>Animals</th>
+            <th id="animals">Animals</th>
             <th>Fruits</th>
             <th>Places</th>
             <th>Cars</th>
           </tr>
           <tr>
-            <td>Cat</td>
+            <td aria-describedby="animals">Cat</td>
             <td>Apple</td>
             <td>Nigeria</td>
             <td>Ford Mustang</td>
@@ -193,18 +168,21 @@
       </section>
 
       <!-- Accordion -->
-      <div class="accordion-section">
+      <section class="accordion-section">
         <h1>Accordion</h1>
-        <!-- <div
-        class="accordion"
-        aria-expanded="false"
-        aria-labelledby="accordion-label"
-      >
-        <h3 id="accordion-label">Click me</h3>
-        <p
-          >Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, et.</p
+        <button
+          class="accordion"
+          aria-expanded="false"
+          aria-labelledby="accordion-label"
         >
-      </div> -->
+          <h3 id="accordion-label">Click me</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam, ex
+            magnam totam, ducimus deserunt quia excepturi consectetur neque
+            repellat amet assumenda maxime provident rerum placeat quis ad unde
+            porro. Quia!
+          </p>
+        </button>
         <div class="accordion">
           <h3 class="accordion-drop-btn">
             How many days are in a week?
@@ -249,7 +227,7 @@
             Perferendis?
           </p>
         </div>
-      </div>
+      </section>
 
       <!-- Images section -->
       <div class="images-section">
@@ -285,10 +263,10 @@
       </div>
 
       <!-- Modal Window 
-      role="dialog"
-      aria-modal="true"
-      aria-live="assertive"
-      aria-labelledby="modal-title" -->
+            role="dialog"
+            aria-modal="true"
+            aria-live="assertive"
+            aria-labelledby="modal-title" -->
       <div class="overlay">
         <div class="modal">
           <h1 id="modal-title">Your responses have been submitted.</h1>

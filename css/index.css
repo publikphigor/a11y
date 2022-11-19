@@ -97,6 +97,9 @@ header,
   flex-direction: column;
   gap: 5px;
   cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
 }
 .burger > div {
   width: 25px;
@@ -167,7 +170,7 @@ header,
 .slider {
   width: 100%;
   height: 400px;
-  overflow-x: hidden;
+  overflow: hidden;
   position: relative;
 }
 
@@ -183,9 +186,14 @@ header,
   transform: translateY(-50%);
   cursor: pointer;
   transition: background-color 0.4s;
+  display: grid;
+  place-content: center;
 }
 .slider--btn:hover {
-  background-color: #222;
+  background-color: blue;
+}
+.slider--btn:focus {
+  background-color: #f12828;
 }
 .slider--btn.prev {
   left: 24px;
@@ -268,7 +276,8 @@ header,
 }
 
 table,
-td {
+td,
+th {
   border: 1px solid #000;
   border-collapse: collapse;
 }
@@ -339,7 +348,14 @@ footer,
   display: block;
   width: 100%;
   padding: 12px;
+}
+.contact-form > div {
   margin-bottom: 12px;
+}
+.contact-form span {
+  color: #f12828;
+  font-size: 0.8em;
+  font-weight: 600;
 }
 .contact-form input[type="submit"]:focus {
   background-color: #fff;

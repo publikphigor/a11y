@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/index.css" />
+    <title>Accessibility Tutorial</title>
+  </head>
+
+  <!-- add aria-haspopup="dialog" -->
+  <body>
+    <!-- Header: change to semantic HTML -->
+    <div class="header">
+      <div class="header--inner">
+        <div class="logo">
+          <h1>LogoHere</h1>
+        </div>
+        <nav class="navbar">
+          <div class="nav-list">
+            <p>Home</p>
+            <p>About</p>
+            <p>Contact</p>
+          </div>
+        </nav>
+      </div>
+    </div>
+
+    <!-- Mobile Header: change to semantic HTML -->
+    <div class="mb-header">
+      <div class="mb-header--inner">
+        <div class="mb-logo">
+          <h1>LogoHere</h1>
+        </div>
+
+        <!-- Change to button element, add aria-controls, aria-expanded, and aria-label -->
+        <div class="burger">
+          <div class="line-1"></div>
+          <div class="line-2"></div>
+          <div class="line-3"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Navbar: add aria-label and change to semantic html -->
+    <div class="mb-navbar">
+      <div class="mb-nav-list">
+        <p>Home</p>
+        <p>About</p>
+        <p>Contact</p>
+      </div>
+    </div>
+
+    <div class="fix-padding"></div>
+
+    <!-- ADD LANDMARK ELEMENTS TO PAGE: Header, Main, Section -->
+
+    <!-- Hero: add aria-label="carousel" to the parent -->
+    <div class="slider" tabindex="0">
+      <!-- use native button elements and add aria-label -->
+      <ion-icon name="arrow-back" class="slider--btn prev"></ion-icon>
+      <ion-icon name="arrow-forward" class="slider--btn next"></ion-icon>
+      <div class="slider--inner">
+        <!-- add role="group" and aria-label="slide 1 of 4" -->
+        <div class="slide">
+          <div class="slide--content">
+            <h5 class="slide--heading">
+              Learn about Accessibility with publikphigor
+            </h5>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptatibus, in illo. Cumque necessitatibus, eos velit
+              perferendis reprehenderit sunt blanditiis fugit.
+            </p>
+            <div class="buttons">
+              <span class="btn btn--fill">Button One</span>
+              <span class="btn btn--outline">Button Two</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="slide">
+          <div class="slide--content">
+            <h5 class="slide--heading">Write Semantic HTor</h5>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptatibus, in illo. Cumque necessitatibus, eos velit
+              perferendis reprehenderit sunt blanditiis fugit.
+            </p>
+            <div class="buttons">
+              <span class="btn btn--fill">Button One</span>
+              <span class="btn btn--outline">Button Two</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="slide">
+          <div class="slide--content">
+            <h5 class="slide--heading">Get started with ARIA in 10 minutes</h5>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptatibus, in illo. Cumque necessitatibus, eos velit
+              perferendis reprehenderit sunt blanditiis fugit.
+            </p>
+            <div class="buttons">
+              <span class="btn btn--fill">Button One</span>
+              <span class="btn btn--outline">Button Two</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="slide">
+          <div class="slide--content">
+            <h5 class="slide--heading">Nothing here, just vibes!</h5>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Voluptatibus, in illo. Cumque necessitatibus, eos velit
+              perferendis reprehenderit sunt blanditiis fugit.
+            </p>
+            <div class="buttons">
+              <span class="btn btn--fill">Button One</span>
+              <span class="btn btn--outline">Button Two</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tables -->
+    <!-- METHOD 2 - ARIA aria-describedby="table-desc" -->
+    <!-- <p id="table-desc">This describes the summary. Connected with ARIA</p> -->
+    <div class="table-section">
+      <table>
+        <h2>This is a caption</h2>
+        <p>This is a summary</p>
+
+        <!-- 
+          METHOD 1 - Semantic HTML
+          <caption
+          >This is the caption
+          <span>This is the summary</span>
+        </caption> -->
+
+        <tr>
+          <!-- Change these to <th> and add ids for labels -->
+          <td>Animals</td>
+          <td>Fruits</td>
+          <td>Places</td>
+          <td>Cars</td>
+        </tr>
+        <tr>
+          <td>Cat</td>
+          <td>Apple</td>
+          <td>Nigeria</td>
+          <td>Ford Mustang</td>
+        </tr>
+        <tr>
+          <td>Dog</td>
+          <td>Pineapple</td>
+          <td>Egypt</td>
+          <td>Tesla</td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- Accordion -->
+    <div class="accordion-section">
+      <h1>Accordion</h1>
+      <!-- <div
+        class="accordion"
+        aria-expanded="false"
+        aria-labelledby="accordion-label"
+      >
+        <h3 id="accordion-label">Click me</h3>
+        <p
+          >Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius, et.</p
+        >
+      </div> -->
+      <div class="accordion">
+        <h3 class="accordion-drop-btn">
+          How many days are in a week?
+          <ion-icon name="arrow-dropdown"></ion-icon>
+        </h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima
+          aspernatur architecto perferendis, dolorum, esse, quae nobis quis
+          dolore suscipit itaque iusto molestiae quia! Culpa vitae, temporibus
+          placeat exercitationem voluptate architecto consequuntur facilis odit
+          veniam, voluptas voluptatum iusto ea recusandae esse omnis labore
+          ratione itaque doloribus illo facere. Voluptatum, quibusdam.
+          Perferendis?
+        </p>
+      </div>
+      <div class="accordion">
+        <h3 class="accordion-drop-btn">
+          What is accessibility? <ion-icon name="arrow-dropdown"></ion-icon>
+        </h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima
+          aspernatur architecto perferendis, dolorum, esse, quae nobis quis
+          dolore suscipit itaque iusto molestiae quia! Culpa vitae, temporibus
+          placeat exercitationem voluptate architecto consequuntur facilis odit
+          veniam, voluptas voluptatum iusto ea recusandae esse omnis labore
+          ratione itaque doloribus illo facere. Voluptatum, quibusdam.
+          Perferendis?
+        </p>
+      </div>
+      <div class="accordion">
+        <h3 class="accordion-drop-btn">
+          How to get started with accessibility?
+          <ion-icon name="arrow-dropdown"></ion-icon>
+        </h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima
+          aspernatur architecto perferendis, dolorum, esse, quae nobis quis
+          dolore suscipit itaque iusto molestiae quia! Culpa vitae, temporibus
+          placeat exercitationem voluptate architecto consequuntur facilis odit
+          veniam, voluptas voluptatum iusto ea recusandae esse omnis labore
+          ratione itaque doloribus illo facere. Voluptatum, quibusdam.
+          Perferendis?
+        </p>
+      </div>
+    </div>
+
+    <!-- Images section -->
+    <div class="images-section">
+      <h6>Images</h6>
+      <img src="https://source.unsplash.com/P-yzuyWFEIk" alt="" />
+    </div>
+
+    <!-- Form with validation -->
+    <div class="footer">
+      <form class="contact-form">
+        <h1>Form with validation</h1>
+
+        <!-- wrap each input in a div, add span tags for validity, add aria-invalid, aria-describedBy for password labels and ids, add onblur attribute and pass validity function -->
+        <input type="text" placeholder="Enter your name" required="true" />
+        <div></div>
+        <input type="email" placeholder="Enter your email address" id="email" />
+        <div></div>
+        <div>
+          <input type="password" placeholder="Create a password" />
+          <span
+            >Password must be 8-15 characters and include letters and
+            numbers.</span
+          >
+        </div>
+        <input type="date" />
+        <div></div>
+        <input type="submit" value="Submit" class="btn btn--fill" />
+      </form>
+    </div>
+
+    <!-- Modal Window 
+      role="dialog"
+      aria-modal="true"
+      aria-live="assertive"
+      aria-labelledby="modal-title" -->
+    <div class="overlay">
+      <div class="modal">
+        <h1 id="modal-title">Your responses have been submitted.</h1>
+        <p>To close click a button, Escape, or outside this dialog.</p>
+        <!--  aria-label="Close" -->
+        <button class="close-modal">X</button>
+        <button class="close-modal">Close</button>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>

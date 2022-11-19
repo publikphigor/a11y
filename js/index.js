@@ -72,6 +72,18 @@ function nextSlide() {
   counter++;
   sliderContainer.style.transition = `transform 0.4s ease-in-out`;
   sliderContainer.style.transform = `translateX(-${slideSize * counter}%)`;
+  slides.forEach((slide, index) => {
+    if (index === counter) return;
+    slide.setAttribute("aria-hidden", "true");
+    slide
+      .querySelectorAll("button")
+      .forEach((btn) => btn.setAttribute("tabindex", "-1"));
+  });
+  slides[counter].focus();
+  slides[counter].setAttribute("aria-hidden", "false");
+  slides[counter]
+    .querySelectorAll("button")
+    .forEach((btn) => btn.setAttribute("tabindex", "0"));
 }
 
 function prevSlide() {
@@ -79,6 +91,15 @@ function prevSlide() {
   counter--;
   sliderContainer.style.transition = `transform 0.4s ease-in-out`;
   sliderContainer.style.transform = `translateX(-${slideSize * counter}%)`;
+  slides.forEach((slide, index) => {
+    if (index === counter) return;
+    slide.setAttribute("aria-hidden", "true");
+  });
+  slides[counter].focus();
+  slides[counter].setAttribute("aria-hidden", "false");
+  slides[counter]
+    .querySelectorAll("button")
+    .forEach((btn) => btn.setAttribute("tabindex", "0"));
 }
 
 nextBtn.addEventListener("click", nextSlide);
@@ -144,12 +165,12 @@ contactForm.addEventListener("submit", function (e) {
   showOverlayModal();
 });
 
-function checkValidity(id) {
-  alert(1);
+function checkValidity() {
   console.log(1);
-  const el = document.getElementById(id);
   const value = el.value.trim();
   if ((value = "")) {
     el.setAttribute("aria-invalid", "true");
   }
 }
+
+document.querySelector("#email").addEventListener("blur", checkValidity);
