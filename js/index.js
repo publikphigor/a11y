@@ -75,6 +75,7 @@ function nextSlide() {
   slides.forEach((slide, index) => {
     if (index === counter) return;
     slide.setAttribute("aria-hidden", "true");
+    slide.blur();
     slide
       .querySelectorAll("button")
       .forEach((btn) => btn.setAttribute("tabindex", "-1"));
@@ -94,6 +95,7 @@ function prevSlide() {
   slides.forEach((slide, index) => {
     if (index === counter) return;
     slide.setAttribute("aria-hidden", "true");
+    slide.blur();
   });
   slides[counter].focus();
   slides[counter].setAttribute("aria-hidden", "false");
