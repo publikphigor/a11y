@@ -152,6 +152,26 @@ header,
   font-weight: 500;
 }
 
+#input-error-msg {
+  display: none;
+}
+#correctPassword {
+  display: none;
+  color: #05a505;
+}
+#correctPassword.correct {
+  display: block;
+}
+#input-error-msg.invalid {
+  display: block;
+}
+#password-input.invalid {
+  border: 2px solid #ff2828;
+}
+#password-input.correct {
+  border: 2px solid #05a505;
+}
+
 @media screen and (max-width: 820px) {
   .fix-padding {
     padding-top: 80px;

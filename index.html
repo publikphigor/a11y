@@ -272,10 +272,25 @@
           />
           <div></div>
           <div>
-            <input type="password" placeholder="Create a password" />
-            <span aria-live="assertive" role="alert" aria-hidden="true"
+            <input
+              type="password"
+              placeholder="Create a password"
+              id="password-input"
+            />
+            <span
+              aria-live="assertive"
+              role="alert"
+              aria-hidden="true"
+              id="input-error-msg"
               >Password must be 8-15 characters and include letters and
-              numbers.</span
+              numbers</span
+            >
+            <span
+              id="correctPassword"
+              aria-live="assertive"
+              role="alert"
+              aria-hidden="true"
+              >Correct password!</span
             >
           </div>
           <input type="date" />

@@ -167,12 +167,28 @@ contactForm.addEventListener("submit", function (e) {
   showOverlayModal();
 });
 
-function checkValidity() {
-  console.log(1);
-  const value = el.value.trim();
-  if ((value = "")) {
-    el.setAttribute("aria-invalid", "true");
+const errMsg = document.querySelector("#input-error-msg");
+const correctMsg = document.querySelector("#correctPassword");
+const passwordInput = document.querySelector("#password-input");
+
+function checkValidity(e) {
+  if (e.target.value !== "correctpassword") {
+    correctMsg.classList.remove("correct");
+    errMsg.classList.add("invalid");
+    errMsg.setAttribute("aria-hidden", false);
+    correctMsg.setAttribute("aria-hidden", true);
+    passwordInput.classList.add("invalid");
+    passwordInput.classList.remove("correct");
+  } else {
+    correctMsg.classList.add("correct");
+    errMsg.classList.remove("invalid");
+    errMsg.setAttribute("aria-hidden", true);
+    correctMsg.setAttribute("aria-hidden", false);
+    passwordInput.classList.remove("invalid");
+    passwordInput.classList.add("correct");
   }
 }
 
 document.querySelector("#email").addEventListener("blur", checkValidity);
+
+passwordInput.addEventListener("blur", checkValidity);
