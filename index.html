@@ -103,7 +103,7 @@
 
           <div class="slide">
             <div class="slide--content">
-              <h1 class="slide--heading">Write Semantic HTor</h1>
+              <h1 class="slide--heading">Write Semantic HTML</h1>
               <p>
                 Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                 Voluptatibus, in illo. Cumque necessitatibus, eos velit
@@ -273,7 +273,7 @@
           <div></div>
           <div>
             <input type="password" placeholder="Create a password" />
-            <span
+            <span aria-live="assertive" role="alert" aria-hidden="true"
               >Password must be 8-15 characters and include letters and
               numbers.</span
             >
@@ -289,7 +289,7 @@
       aria-modal="true"
       aria-live="assertive"
       aria-labelledby="modal-title" -->
-      <div class="overlay">
+      <div class="overlay" aria-live="assertive" role="alert" aria-modal="true">
         <div class="modal">
           <h1 id="modal-title">Your responses have been submitted.</h1>
           <p>To close click a button, Escape, or outside this dialog.</p>
